@@ -29,3 +29,57 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 .work-label small{font-size:.58rem}
 @media(max-width:760px){.shoot-banners{grid-template-columns:1fr}.shoot-banner{min-height:220px}.work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.work-card,.work-card.tall{min-height:0;aspect-ratio:4/3}.work-label{left:11px;bottom:11px}.work-label h3{font-size:1.35rem}.work-label small{font-size:.5rem}}
 @media(max-width:420px){.work-grid{grid-template-columns:1fr}.work-card,.work-card.tall{aspect-ratio:16/11}}
+
+/* Masonry portfolio layout */
+.work-grid{
+  display:block;
+  column-count:3;
+  column-gap:16px;
+}
+.work-card,.work-card.tall{
+  display:inline-block;
+  position:relative;
+  width:100%;
+  min-height:0;
+  height:auto;
+  aspect-ratio:auto;
+  margin:0 0 16px;
+  overflow:hidden;
+  break-inside:avoid;
+  background:#1a1a1a;
+  vertical-align:top;
+}
+.work-card[hidden]{display:none}
+.work-card img{
+  display:block;
+  position:relative;
+  inset:auto;
+  width:100%;
+  height:auto;
+  object-fit:initial;
+  transition:transform .65s;
+}
+.work-card:after{
+  content:"";
+  position:absolute;
+  inset:45% 0 0;
+  background:linear-gradient(transparent,#000b);
+  pointer-events:none;
+}
+.work-label{
+  position:absolute;
+  z-index:1;
+  left:18px;
+  right:12px;
+  bottom:17px;
+}
+@media(max-width:760px){
+  .work-grid{column-count:2;column-gap:10px}
+  .work-card,.work-card.tall{margin-bottom:10px}
+  .work-label{left:11px;bottom:11px}
+  .work-label h3{font-size:1.35rem}
+  .work-label small{font-size:.5rem}
+}
+@media(max-width:420px){
+  .work-grid{column-count:1}
+}
