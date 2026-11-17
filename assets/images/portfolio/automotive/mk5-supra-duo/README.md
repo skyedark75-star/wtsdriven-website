@@ -2,6 +2,6 @@
 
 Automotive photography featuring two MK5 Toyota Supras (A90).
 
-This is a separate shoot from the other MK5 Supra gallery. This folder contains 70 photos across the duo-shoot batches.
+The Golf R photos have been separated into the Golf R folder. This folder contains 45 photos from the Supra duo batches.
 
 Original image filenames and WebP quality are preserved.
